@@ -5,10 +5,14 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour {
 
     [SerializeField]
+    GameObject crashParticle;
+
+    [SerializeField]
     float speed = 5f;
 
     Rigidbody rigidBody;
     Animator animator;
+    AudioSource audioSource;
 
     bool isDriving = true;
     bool gameOver = false;
@@ -16,6 +20,7 @@ public class MoveForward : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponentInParent<AudioSource>();
        // rigidBody.AddForce(Vector3.forward * speed);
 
         animator = GetComponentInParent<Animator>();
@@ -30,7 +35,7 @@ public class MoveForward : MonoBehaviour {
         }
 
 	}
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         //print("trigger");
         if (other.gameObject.tag == "FrontCollider" && !gameOver)
@@ -39,6 +44,11 @@ public class MoveForward : MonoBehaviour {
             isDriving = false;
             animator.SetTrigger("FrontCollision");
             this.transform.parent.transform.position = lastPos;
+
+            ContactPoint contact = other.contacts[0];
+            Instantiate(crashParticle, contact.point, Quaternion.identity);
+ 
+            audioSource.Play();
             gameOver = true;
         }
         if (other.gameObject.tag == "LeftCollider" && !gameOver)
@@ -46,6 +56,11 @@ public class MoveForward : MonoBehaviour {
             isDriving = false;
             animator.SetTrigger("LeftCollision");
             this.transform.parent.transform.position = lastPos;
+
+            ContactPoint contact = other.contacts[0];
+            Instantiate(crashParticle, contact.point, Quaternion.identity);
+
+            audioSource.Play();
             gameOver = true;
         }
         if (other.gameObject.tag == "RightCollider" && !gameOver)
@@ -53,7 +68,13 @@ public class MoveForward : MonoBehaviour {
             isDriving = false;
             animator.SetTrigger("RightCollision");
             this.transform.parent.transform.position = lastPos;
+
+            ContactPoint contact = other.contacts[0];
+            Instantiate(crashParticle, contact.point, Quaternion.identity);
+
+            audioSource.Play();
             gameOver = true;
         }
     }
+
 }
