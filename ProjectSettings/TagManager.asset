@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Chunk
+  - FrontCollider
+  - LeftCollider
+  - RightCollider
   layers:
   - Default
   - TransparentFX

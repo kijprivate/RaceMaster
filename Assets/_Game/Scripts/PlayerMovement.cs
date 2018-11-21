@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         myPosition = Position.Center; 
     }
 
@@ -39,13 +39,7 @@ public class PlayerMovement : MonoBehaviour
         ChangePosition();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            print("GameOver");
-        }
-    }
+
 
     private void GetStartingMousePos()
     {
