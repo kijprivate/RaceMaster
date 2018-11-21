@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
+  m_BindingMode: 5
   m_FollowOffset: {x: 0, y: 19.32, z: -12.550003}
   m_XDamping: 1
   m_YDamping: 1
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 139197281}
+  m_Follow: {fileID: 1608287551}
   m_Lens:
     FieldOfView: 55
     OrthographicSize: 10

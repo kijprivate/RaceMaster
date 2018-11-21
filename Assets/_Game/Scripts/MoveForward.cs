@@ -45,12 +45,14 @@ public class MoveForward : MonoBehaviour {
         {
             isDriving = false;
             animator.SetTrigger("LeftCollision");
+            this.transform.parent.transform.position = lastPos;
             gameOver = true;
         }
         if (other.gameObject.tag == "RightCollider" && !gameOver)
         {
             isDriving = false;
             animator.SetTrigger("RightCollision");
+            this.transform.parent.transform.position = lastPos;
             gameOver = true;
         }
     }
