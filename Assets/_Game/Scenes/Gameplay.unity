@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7341055, g: 0.68550944, b: 0.6916613, a: 1}
+  m_IndirectSpecularColor: {r: 0.73410565, g: 0.6855101, b: 0.6916618, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -586,11 +586,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vehicles:
-  - {fileID: 1070288229889456, guid: 02010346696f4024c925a1c93cd7fafa, type: 2}
-  - {fileID: 1839150247105368, guid: dbefb408e8962854885b5e886db92f19, type: 2}
-  - {fileID: 1877144911830922, guid: 5d8abb3180abbf14199995b13f8cbd18, type: 2}
-  - {fileID: 1803666887259244, guid: 8ca70956bdd3973479267146362375d5, type: 2}
-  - {fileID: 1773450960734266, guid: 55df3ead82c980842944014e4a7fbf9e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &862352181
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,48 +819,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1032337469}
   m_Mesh: {fileID: 4300006, guid: 052443bce822a864d98e1185d022961e, type: 3}
---- !u!1001 &1156386688
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275969499706566, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1232856416
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +863,7 @@ MonoBehaviour:
   player: {fileID: 139197280}
   chunkParent: {fileID: 244386185}
   chunkPrefabs:
-  - {fileID: 1612689045876368, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
+  - {fileID: 1707296335798902, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
   offset: {x: 0, y: 0, z: 246}
 --- !u!65 &1232856419
 BoxCollider:
@@ -1113,11 +1071,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vehicles:
-  - {fileID: 1070288229889456, guid: 02010346696f4024c925a1c93cd7fafa, type: 2}
-  - {fileID: 1839150247105368, guid: dbefb408e8962854885b5e886db92f19, type: 2}
-  - {fileID: 1877144911830922, guid: 5d8abb3180abbf14199995b13f8cbd18, type: 2}
-  - {fileID: 1803666887259244, guid: 8ca70956bdd3973479267146362375d5, type: 2}
-  - {fileID: 1773450960734266, guid: 55df3ead82c980842944014e4a7fbf9e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1838960546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,8 +1232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vehicles:
-  - {fileID: 1070288229889456, guid: 02010346696f4024c925a1c93cd7fafa, type: 2}
-  - {fileID: 1839150247105368, guid: dbefb408e8962854885b5e886db92f19, type: 2}
-  - {fileID: 1877144911830922, guid: 5d8abb3180abbf14199995b13f8cbd18, type: 2}
-  - {fileID: 1803666887259244, guid: 8ca70956bdd3973479267146362375d5, type: 2}
-  - {fileID: 1773450960734266, guid: 55df3ead82c980842944014e4a7fbf9e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
