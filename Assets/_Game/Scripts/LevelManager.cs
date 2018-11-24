@@ -30,9 +30,12 @@ public class LevelManager : MonoBehaviour
 	}
 	public void LoadLevel()
 	{
-        player.GetComponent<Animator>().SetTrigger("StartGame");
         Invoke("LoadWithDelay", 0.7f);
 	}
+    public void LoadLevel(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
     public void LoadWithDelay()
     {
         SceneManager.LoadScene(1);

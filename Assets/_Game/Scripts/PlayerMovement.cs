@@ -8,32 +8,26 @@ public class PlayerMovement : MonoBehaviour
     enum Position  {Left,Center,Right };
     Position myPosition = Position.Center;
 
-    [SerializeField]
-    float speed = 5f;
-
-    [SerializeField]
-    PlayerMovement player;
+    MoveForwardAndCollision player;
 
     Animator animator;
 
     Vector3 touchPtScreen;
     Vector3 startTouchPt;
 
-    Vector3 leftPos;
-    Vector3 centerPos;
-    Vector3 rightPos;
-
     bool isClicked = false;
-    // Use this for initialization
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        myPosition = Position.Center; 
+        myPosition = Position.Center;
+        player = GetComponentInChildren<MoveForwardAndCollision>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (player.gameOver) { return; }
+
         GetStartingMousePos();
 
         ChangePosition();
@@ -68,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetTrigger("CenterFromLeft");
                         myPosition = Position.Center;
                         isClicked = false;
-                       // print(myPosition);
                     }
                     break;
                 case Position.Center:
@@ -77,14 +70,12 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetTrigger("MoveLeft");
                         myPosition = Position.Left;
                         isClicked = false;
-                       // print(myPosition);
                     }
                     else if (startTouchPt.x - CrossPlatformInputManager.mousePosition.x < 0)
                     {
                         animator.SetTrigger("MoveRight");
                         myPosition = Position.Right;
                         isClicked = false;
-                       // print(myPosition);
                     }
                     break;
                 case Position.Right:
@@ -93,7 +84,6 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetTrigger("CenterFromRight");
                         myPosition = Position.Center;
                         isClicked = false;
-                       // print(myPosition);
                     }
                     break;
             }

@@ -12,10 +12,23 @@ public class CollectiblesHandler : MonoBehaviour {
     private void Awake()
     {
         EventManager.EventCoinCollected += OnCoinCollected;
+        EventManager.EventGameOver += OnGameOver;
+        Coins = 0;
     }
 
     void OnCoinCollected()
     {
         Coins += coinValue;
+    }
+
+    void OnGameOver()
+    {
+        PlayerPrefsManager.SetNumberOfCoins(PlayerPrefsManager.GetNumberOfCoins() + Coins);
+        PlayerPrefsManager.SetGamesPlayed(PlayerPrefsManager.GetGamesPlayed() + 1);
+
+        EventManager.EventCoinCollected -= OnCoinCollected;
+        EventManager.EventGameOver -= OnGameOver;
+
+        Coins = 0;
     }
 }

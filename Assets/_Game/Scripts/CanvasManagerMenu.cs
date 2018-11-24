@@ -32,6 +32,8 @@ public class CanvasManagerMenu : MonoBehaviour {
         highScore.text = "HIGH SCORE: "+PlayerPrefsManager.GetHighScore();
         gamesPlayed.text = "GAMES PLAYED: "+PlayerPrefsManager.GetGamesPlayed();
         coins.text = PlayerPrefsManager.GetNumberOfCoins().ToString();
+
+        EventManager.EventMenuLoaded -= OnMenuLoaded;
     }
 
 }

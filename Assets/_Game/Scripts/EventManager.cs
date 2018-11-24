@@ -34,6 +34,12 @@ public static class EventManager
         if (EventGameplayLoaded != null) EventGameplayLoaded();
     }
 
+    public static Event EventGameOver;
+    public static void RaiseEventGameOver()
+    {
+        if (EventGameOver != null) EventGameOver();
+    }
+
     public static Event EventCoinCollected;
     public static void RaiseEventCoinCollected()
     {
