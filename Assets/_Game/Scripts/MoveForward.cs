@@ -14,8 +14,8 @@ public class MoveForward : MonoBehaviour {
     Animator animator;
     AudioSource audioSource;
 
-    bool isDriving = true;
-    bool gameOver = false;
+    bool isDriving = false;
+    public bool gameOver = false;
     Vector3 lastPos;
 	// Use this for initialization
 	void Start () {
@@ -28,6 +28,8 @@ public class MoveForward : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(Input.GetMouseButton(0))
+        { isDriving = true; }
         if (isDriving)
         {
             this.transform.parent.transform.position += new Vector3(0f,0f, speed * Time.deltaTime);

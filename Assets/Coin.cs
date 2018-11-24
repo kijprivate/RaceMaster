@@ -8,10 +8,12 @@ public class Coin : MonoBehaviour {
     AudioClip clip;
 
     ParticleSystem particleSystem;
+    Animator animator;
 
     private void Start()
     {
         particleSystem = GetComponent<ParticleSystem>();
+        animator = GetComponent<Animator>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -19,13 +21,14 @@ public class Coin : MonoBehaviour {
         {
             AudioSource.PlayClipAtPoint(clip, this.transform.position);
             particleSystem.Play();
+            animator.SetTrigger("Collected");
             StartCoroutine(DestroyRoutine());
         }
     }
 
     private IEnumerator DestroyRoutine()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
         Destroy(this.gameObject);
     }
 }
