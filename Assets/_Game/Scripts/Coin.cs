@@ -15,12 +15,13 @@ public class Coin : MonoBehaviour {
         particleSystem = GetComponent<ParticleSystem>();
         animator = GetComponent<Animator>();
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)   // todo handle everything in eventcoincollected
     {
         if (other.tag == "Player")
         {
             AudioSource.PlayClipAtPoint(clip, this.transform.position);
             particleSystem.Play();
+            EventManager.RaiseEventCoinCollected();
             animator.SetTrigger("Collected");
             StartCoroutine(DestroyRoutine());
         }
