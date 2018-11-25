@@ -34,6 +34,12 @@ public static class EventManager
         if (EventGameplayLoaded != null) EventGameplayLoaded();
     }
 
+    public static Event EventGameStarted;
+    public static void RaiseEventGameStarted()
+    {
+        if (EventGameStarted != null) EventGameStarted();
+    }
+
     public static Event EventGameOver;
     public static void RaiseEventGameOver()
     {
@@ -44,5 +50,17 @@ public static class EventManager
     public static void RaiseEventCoinCollected()
     {
         if (EventCoinCollected != null) EventCoinCollected();
+    }
+
+    public static Event EventCoinSubstracted;
+    public static void RaiseEventCoinSubstracted()
+    {
+        if (EventCoinSubstracted != null) EventCoinSubstracted();
+    }
+
+    public static Event<int> EventChooseCar;
+    public static void RaiseEventChooseCar(int carNumber)
+    {
+        if (EventChooseCar != null) EventChooseCar(carNumber);
     }
 }

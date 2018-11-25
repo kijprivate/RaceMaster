@@ -19,6 +19,9 @@ public class CanvasManagerGameplay : MonoBehaviour {
     [SerializeField, Tooltip("Child of Canvas object")]
     Text coins;
 
+    [SerializeField, Tooltip("Child of Canvas object")]
+    Text swipeText;
+
     [SerializeField, Tooltip("Player's body")]
     MoveForwardAndCollision player;
 
@@ -32,6 +35,7 @@ public class CanvasManagerGameplay : MonoBehaviour {
         EventManager.EventGameplayLoaded += OnGameplayLoaded;
         EventManager.EventCoinCollected += OnCoinCollected;
         EventManager.EventGameOver += OnGameOver;
+        EventManager.EventGameStarted += OnGameStarted;
         coins.text = 0.ToString();
     }
 
@@ -67,6 +71,12 @@ public class CanvasManagerGameplay : MonoBehaviour {
         EventManager.EventGameplayLoaded -= OnGameplayLoaded;
         EventManager.EventCoinCollected -= OnCoinCollected;
         EventManager.EventGameOver -= OnGameOver;
+    }
+
+    void OnGameStarted()
+    {
+        swipeText.enabled = false;
+        EventManager.EventGameStarted -= OnGameStarted;
     }
 
     private void ShowButtons()

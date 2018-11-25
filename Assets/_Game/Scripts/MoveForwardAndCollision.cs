@@ -30,8 +30,11 @@ public class MoveForwardAndCollision : MonoBehaviour {
 	
 	void Update ()
     {
-        if(Input.GetMouseButton(0) && !gameOver)
-        { isDriving = true; }
+        if(Input.GetMouseButton(0) && !gameOver && !isDriving)
+        {
+            isDriving = true;
+            EventManager.RaiseEventGameStarted();
+        }
 
         if (isDriving)
         {

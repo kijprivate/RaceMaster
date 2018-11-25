@@ -19,6 +19,7 @@ public class CanvasManagerMenu : MonoBehaviour {
     private void Awake()
     {
         EventManager.EventMenuLoaded += OnMenuLoaded;
+        EventManager.EventCoinSubstracted += OnCoinSubstracted;
     }
 
     void Start ()
@@ -36,4 +37,13 @@ public class CanvasManagerMenu : MonoBehaviour {
         EventManager.EventMenuLoaded -= OnMenuLoaded;
     }
 
+    void OnCoinSubstracted()
+    {
+        coins.text = PlayerPrefsManager.GetNumberOfCoins().ToString();
+    }
+
+    public void ClearEvent()
+    {
+        EventManager.EventCoinSubstracted -= OnCoinSubstracted;
+    }
 }
