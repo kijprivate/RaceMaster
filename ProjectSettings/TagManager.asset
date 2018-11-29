@@ -9,6 +9,7 @@ TagManager:
   - FrontCollider
   - LeftCollider
   - RightCollider
+  - SoundTrigger
   layers:
   - Default
   - TransparentFX

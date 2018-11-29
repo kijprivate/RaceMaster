@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class LevelManager : MonoBehaviour 
 {
@@ -42,7 +43,7 @@ public class LevelManager : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(CrossPlatformInputManager.GetButton("Cancel"))
         {
             Application.Quit();
         }

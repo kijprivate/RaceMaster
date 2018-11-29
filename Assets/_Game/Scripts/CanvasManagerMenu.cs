@@ -19,11 +19,12 @@ public class CanvasManagerMenu : MonoBehaviour {
     private void Awake()
     {
         EventManager.EventMenuLoaded += OnMenuLoaded;
-        EventManager.EventCoinSubstracted += OnCoinSubstracted;
     }
 
     void Start ()
     {
+        //PlayerPrefsManager.LockAllCars();
+        //PlayerPrefsManager.SetNumberOfCoins(15000);
         EventManager.RaiseEventMenuLoaded();
     }
     
@@ -40,6 +41,11 @@ public class CanvasManagerMenu : MonoBehaviour {
     void OnCoinSubstracted()
     {
         coins.text = PlayerPrefsManager.GetNumberOfCoins().ToString();
+    }
+
+    public void AddEvent()
+    {
+        EventManager.EventCoinSubstracted += OnCoinSubstracted;
     }
 
     public void ClearEvent()

@@ -11,10 +11,41 @@ public class ChunkManager : MonoBehaviour {
     GameObject chunkParent;
 
     [SerializeField]
+    GameObject[] chunkDesertPrefabs;
+
+    [SerializeField]
+    GameObject[] chunkGreenPrefabs;
+
+    [SerializeField]
+    GameObject[] chunkWinterPrefabs;
+
+    [SerializeField]
     GameObject[] chunkPrefabs;
 
     [SerializeField]
     Vector3 offset = new Vector3(0f, 0f, 50f);
+
+    private void Awake()
+    {
+        int setOfChunks = PlayerPrefsManager.GetChoosenEnvNumber();
+
+        switch(setOfChunks)
+        {
+            case 0:
+                chunkPrefabs = chunkDesertPrefabs;
+                break;
+            case 1:
+                chunkPrefabs = chunkGreenPrefabs;
+                break;
+            case 2:
+                chunkPrefabs = chunkWinterPrefabs;
+                break;
+            default:
+                chunkPrefabs = chunkDesertPrefabs;
+                Debug.LogWarning("Unexpected set of chunks");
+                break;
+        }
+    }
 
     private void Start()
     {

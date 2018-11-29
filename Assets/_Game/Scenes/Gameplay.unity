@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7341055, g: 0.68550944, b: 0.6916613, a: 1}
+  m_IndirectSpecularColor: {r: 0.7338322, g: 0.6851104, b: 0.6962968, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -382,7 +382,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -416,13 +416,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &207771450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,8 +1424,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 139197280}
   chunkParent: {fileID: 244386185}
-  chunkPrefabs:
-  - {fileID: 1707296335798902, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
+  chunkDesertPrefabs:
+  - {fileID: 1273379291538784, guid: 84e0a1f5b92f76f4ba23f9c95b90d528, type: 2}
+  - {fileID: 1892443694391168, guid: dff89f8a6ccceef49819db8b15a932fa, type: 2}
+  - {fileID: 1137827547786580, guid: 80e31b522cbb72142bcc121b7fa3778c, type: 2}
+  - {fileID: 1534993207265548, guid: 747f3722bd383e346be9985868fae61a, type: 2}
+  - {fileID: 1957379204769096, guid: 44c10dc3047cbfc4381513ce2910f79d, type: 2}
+  chunkGreenPrefabs:
+  - {fileID: 1537304110544680, guid: d866774cd0a9f7b468f858023279d13c, type: 2}
+  - {fileID: 1758749282487012, guid: 15a847dd3f8ead341b39b145e307e86b, type: 2}
+  - {fileID: 1961805986721572, guid: 90982be6dfe4af743b5de85e679eac3b, type: 2}
+  - {fileID: 1488209783906534, guid: 757315b2317e53c4d992478267e22b88, type: 2}
+  - {fileID: 1887723278169338, guid: ca62a272c972c8243851128cb18ed366, type: 2}
+  chunkWinterPrefabs:
+  - {fileID: 1065744620293282, guid: 71abe7d73f077eb41a2b626037341b46, type: 2}
+  - {fileID: 1583108575684720, guid: cfccaa710c030bb4a8f27af1985dc0ad, type: 2}
+  - {fileID: 1443959934488394, guid: 5ad9fd816d3c07a4b937aa3a76d3ee5e, type: 2}
+  - {fileID: 1363764979853666, guid: aabc179e6a99a684c927796a4d453380, type: 2}
+  - {fileID: 1764277493009050, guid: 9c4b7bf815191df4381878f098b82fa3, type: 2}
+  chunkPrefabs: []
   offset: {x: 0, y: 0, z: 246}
 --- !u!65 &1232856419
 BoxCollider:
@@ -1935,7 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.69331324, b: 0.35635456, a: 1}
+  m_Color: {r: 0.6981132, g: 0.37758833, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

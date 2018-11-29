@@ -37,12 +37,11 @@ public class UnlockCar : MonoBehaviour {
     {
         if (carCost <= PlayerPrefsManager.GetNumberOfCoins() && !PlayerPrefsManager.IsCarUnlocked(carNumber))
         {
+            text.enabled = false;
             PlayerPrefsManager.SetNumberOfCoins(PlayerPrefsManager.GetNumberOfCoins() - carCost);
             PlayerPrefsManager.UnlockCar(carNumber);
 
             EventManager.RaiseEventCoinSubstracted();
-
-            text.enabled = false;
         }
         else if(PlayerPrefsManager.IsCarUnlocked(carNumber))
         {
