@@ -99,25 +99,24 @@ public class PlayerPrefsManager : MonoBehaviour
     public static void LockAllEnvs()
     {
         for (int i = 0; i < 30; i++)
-            PlayerPrefs.SetInt(ENV_KEY + i.ToString(), 0);
+        { PlayerPrefs.SetInt(ENV_KEY + i.ToString(), 0); }
     }
 
-    //public static void SetSoundOn()
-    //{
-    //    PlayerPrefs.SetInt(SOUND_ON, 1);
+    public static void SetSoundOn()
+    {
+        PlayerPrefs.SetInt(SOUND_ON, 1);
+    }
 
-    //}
-    //public static void SetSoundOff()
-    //{
-    //    PlayerPrefs.SetInt(SOUND_ON, 0);
+    public static void SetSoundOff()
+    {
+        PlayerPrefs.SetInt(SOUND_ON, 0);
+    }
 
-    //}
-    //public static bool IsSoundOn()
-    //{
-    //    int get = PlayerPrefs.GetInt(SOUND_ON);
-    //    bool isSoundOn = (get == 1);
+    public static bool IsSoundOn()
+    {
+        int get = PlayerPrefs.GetInt(SOUND_ON);
+        bool isSoundOn = (get == 1);
 
-    //    return isSoundOn;
-
-    //}
+        return isSoundOn;
+    }
 }

@@ -1236,6 +1236,46 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 665530035}
   m_CullTransparentMesh: 0
+--- !u!1 &724774889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724774891}
+  - component: {fileID: 724774890}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &724774890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724774889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296000307767e0746be89597737777f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &724774891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724774889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735919741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1719,10 @@ MonoBehaviour:
   highScore: {fileID: 1922240800}
   gamesPlayed: {fileID: 47527720}
   coins: {fileID: 967080784}
+  soundButton: {fileID: 1132280364}
+  soundSprites:
+  - {fileID: 21300000, guid: 18e6af4b4a3cadf4ba4d07ec6a260b10, type: 3}
+  - {fileID: 21300000, guid: 7d8b820327123114fba52fe23aa90e3b, type: 3}
 --- !u!1 &936932687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632bdd4614d31534d8ec63e0dcca6026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentCost: 10000
+  environmentCost: 4000
   environmentNumber: 2
 --- !u!114 &1077773958
 MonoBehaviour:
@@ -2413,7 +2457,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1132280365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935404917}
+        m_MethodName: ToggleSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1132280365
@@ -2787,7 +2842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632bdd4614d31534d8ec63e0dcca6026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentCost: 5000
+  environmentCost: 2000
   environmentNumber: 1
 --- !u!114 &1499605372
 MonoBehaviour:

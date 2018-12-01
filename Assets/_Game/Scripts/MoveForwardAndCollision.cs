@@ -8,11 +8,12 @@ public class MoveForwardAndCollision : MonoBehaviour {
     GameObject crashParticle;
 
     [SerializeField]
-    float speed = 5f;
+    float speed = 20f;
 
     Animator animator;
     AudioSource audioSource;
 
+    float parentDistance;
     bool isDriving = false;
     public bool gameOver = false;
     Vector3 lastPos;
@@ -23,6 +24,7 @@ public class MoveForwardAndCollision : MonoBehaviour {
     }
 
     void Start () {
+        parentDistance = GetComponentInParent<Transform>().position.z;
         audioSource = GetComponentInParent<AudioSource>();
 
         animator = GetComponentInParent<Animator>();
@@ -30,6 +32,11 @@ public class MoveForwardAndCollision : MonoBehaviour {
 	
 	void Update ()
     {
+        if(GetComponentInParent<Transform>().position.z - parentDistance > 100f && speed < 30f)
+        {
+            speed += 1f;
+            parentDistance = GetComponentInParent<Transform>().position.z;
+        }
         if(Input.GetMouseButton(0) && !gameOver && !isDriving)
         {
             isDriving = true;

@@ -5,9 +5,6 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class LevelManager : MonoBehaviour 
 {
-    [SerializeField]
-    GameObject player;
-
     private static LevelManager _instance;
     public static LevelManager Instance { get { return _instance; } }
 
