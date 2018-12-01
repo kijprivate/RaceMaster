@@ -25,6 +25,9 @@ public class ChunkManager : MonoBehaviour {
     [SerializeField]
     Vector3 offset = new Vector3(0f, 0f, 50f);
 
+    int lastIndex;
+    int index;
+
     private void Awake()
     {
         int setOfChunks = PlayerPrefsManager.GetChoosenEnvNumber();
@@ -50,21 +53,32 @@ public class ChunkManager : MonoBehaviour {
     private void Start()
     {
         int index = Random.Range(0, chunkPrefabs.Length);
-        GameObject chunk = Instantiate(chunkPrefabs[index], Vector3.zero, Quaternion.identity);
-        chunk.transform.SetParent(chunkParent.transform);
+        chunkPrefabs[index].transform.position = Vector3.zero;
+        chunkPrefabs[index].SetActive(true);
+        lastIndex = index;
     }
     // Use this for initialization
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Chunk")
         {
-            int index = Random.Range(0, chunkPrefabs.Length);
-            GameObject chunk = Instantiate(chunkPrefabs[index], other.transform.position+offset, Quaternion.identity);
-            chunk.transform.SetParent(chunkParent.transform);
+            while (index == lastIndex)
+            {
+                index = Random.Range(0, chunkPrefabs.Length);
+            }
+            chunkPrefabs[index].transform.position = other.transform.position + offset;
+            chunkPrefabs[index].SetActive(true);
+
             if (player.transform.position.z > 100f)
             {
-                Destroy(chunkParent.transform.GetChild(0).gameObject);
+                foreach(var chunk in chunkPrefabs)
+                {
+                   // chunk.SetActive(false);
+                }
+                chunkPrefabs[lastIndex].SetActive(true);
+                chunkPrefabs[index].SetActive(true);
             }
+            lastIndex = index;
         }
     }
 }
