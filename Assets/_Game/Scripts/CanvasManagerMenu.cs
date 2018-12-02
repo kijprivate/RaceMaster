@@ -30,7 +30,7 @@ public class CanvasManagerMenu : MonoBehaviour {
     void Start ()
     {
         //PlayerPrefsManager.LockAllCars();
-        PlayerPrefsManager.SetNumberOfCoins(15000);
+        //PlayerPrefsManager.SetNumberOfCoins(15000);
         if(PlayerPrefsManager.IsSoundOn())
         {
             soundButton.GetComponent<Image>().sprite = soundSprites[1];
