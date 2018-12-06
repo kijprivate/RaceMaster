@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3d8a654fc637648a26eda4d76e3309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carCost: 1000
+  carCost: 50
   carNumber: 3
 --- !u!1 &354684479
 GameObject:
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3d8a654fc637648a26eda4d76e3309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carCost: 2000
+  carCost: 50
   carNumber: 4
 --- !u!1 &407486345
 GameObject:
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3d8a654fc637648a26eda4d76e3309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carCost: 500
+  carCost: 50
   carNumber: 2
 --- !u!1 &522800919
 GameObject:
@@ -1193,8 +1193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000034332, y: 511.6}
-  m_SizeDelta: {x: 360.8, y: 67.1}
+  m_AnchoredPosition: {x: 4, y: 491}
+  m_SizeDelta: {x: 372, y: 99.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665530037
 MonoBehaviour:
@@ -2081,7 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632bdd4614d31534d8ec63e0dcca6026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentCost: 4000
+  environmentCost: 50
   environmentNumber: 2
 --- !u!114 &1077773958
 MonoBehaviour:
@@ -2842,7 +2842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632bdd4614d31534d8ec63e0dcca6026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentCost: 2000
+  environmentCost: 50
   environmentNumber: 1
 --- !u!114 &1499605372
 MonoBehaviour:
@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3d8a654fc637648a26eda4d76e3309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carCost: 200
+  carCost: 50
   carNumber: 1
 --- !u!1 &1974988969
 GameObject:
@@ -3881,5 +3881,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3d8a654fc637648a26eda4d76e3309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carCost: 5000
+  carCost: 50
   carNumber: 5

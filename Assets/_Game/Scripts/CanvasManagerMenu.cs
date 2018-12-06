@@ -30,6 +30,7 @@ public class CanvasManagerMenu : MonoBehaviour {
     void Start ()
     {
         //PlayerPrefsManager.LockAllCars();
+        //PlayerPrefsManager.LockAllEnvs();
         //PlayerPrefsManager.SetNumberOfCoins(15000);
         if(PlayerPrefsManager.IsSoundOn())
         {
